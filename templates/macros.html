@@ -1,0 +1,9 @@
+{%macro form_field(field)%}
+    {{field.lable}}
+<br>
+{%if field.errors%}
+    {%for error in field.errors%}
+        <small class="error">{{error}}</small>
+    {%end for%}
+{%endif%}
+{%endmacro%}
