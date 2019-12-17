@@ -5,5 +5,4 @@ from work import app
 @app.route("/")
 def recordform():
     form = RecordForm()
-    #return render_template("form.html",form=form)
-    return "hello world"
+    return render_template("form.html",form=form)
