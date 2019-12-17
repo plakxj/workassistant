@@ -9,6 +9,7 @@ app.jinja_env.trim_blocks = True
 app.jinja_env.lstrip_blockss = True
 
 db = SQLAlchemy(app)
+
 from work import views,errors,commands
 
 
