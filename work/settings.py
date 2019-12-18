@@ -5,6 +5,7 @@ import os
 
 dev_db = "sqlite:///" + os.path.join("f:\work","data.db")
 
+
 SECRET_KEY = os.getenv("SECRET_KEY","secret string")
 
 
