@@ -18,8 +18,14 @@ def recordform():
         db.session.add(text1)
         db.session.commit()
         flash("you text is saved")
-        return "come on world"
+        redirect(url_for("showform"))
     return render_template("form.html",form=form)
+
+@app.route("/showform",methods=["GET","POST"])
+def showform():
+    notes = Note.query.all()
+    return render_template("showform.html",notes=notes)
+
 
 @app.cli.command()
 @click.option('--drop', is_flag=True, help='Create after drop.') 
