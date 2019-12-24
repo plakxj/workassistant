@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
 
 import os
-from work import app
-dev_db = "sqlite:///" + os.path.join(os.path.dirname(app.root_path),"data.db")
+
+
+dev_db = "sqlite:///" + os.path.join("f:\work","data.db")
+
 
 SECRET_KEY = os.getenv("SECRET_KEY","secret string")
 
-SQLAHCHEMY_TRACK_MODIFICATIONS = False
+
+SQLAHCHEMY_TRACK_MODIFICATIONS = True
+
 
 SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URI",dev_db)

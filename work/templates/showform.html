@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+</head>
+<body>
+    {%for note in notes%}
+        <div class="center">
+            <a>{{note.suject}}</a><br>
+            <a>{{note.text}}</a><br>
+        </div> 
+    {%endfor%}
+
+    <nav>
+        <ul>
+            <li>
+                <a href="{{ url_for('recordform') }}">recordform</a>
+            </li> 
+        </ul> 
+    </nav>
+    <nav>
+            <ul>
+                <li>
+                    <a href="{{ url_for('showform') }}">showform</a>
+                </li> 
+            </ul> 
+        </nav>
+</body>
+</html>
