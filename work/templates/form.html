@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="t ext/css">
     <title>Title</title>
 </head>
 <body>
@@ -13,11 +14,24 @@
         {{form_field(form.keyword1)}}<br>
 
         {{form_field(form.keyword2)}}<br>
-        {{form_field(form.text)}}<br>
+        {{form_field(form.text,rows=5,cols=50)}}<br>
 
         {{form_field(form.submit)}}<br>
 
     </form>
-
+    <nav>
+            <ul>
+                <li>
+                    <a href="{{ url_for('recordform') }}">recordform</a>
+                </li> 
+            </ul> 
+        </nav>
+        <nav>
+                <ul>
+                    <li>
+                        <a href="{{ url_for('showform') }}">showform</a>
+                    </li> 
+                </ul> 
+            </nav>
 </body>
 </html>
