@@ -1,14 +1,27 @@
+<<<<<<< HEAD
 argh==0.26.2
+=======
+alembic==1.3.2
+>>>>>>> 6a2658eca2ddb074e6043e5f13091b158e4380db
 Click==7.0
 Flask==1.1.1
+Flask-Migrate==2.5.2
 Flask-SQLAlchemy==2.4.1
 Flask-WTF==0.14.2
 itsdangerous==1.1.0
 Jinja2==2.10.3
+Mako==1.1.0
 MarkupSafe==1.1.1
+<<<<<<< HEAD
 pathtools==0.1.2
 python-dotenv==0.10.3
 PyYAML==5.2
+=======
+python-dateutil==2.8.1
+python-dotenv==0.10.3
+python-editor==1.0.4
+six==1.13.0
+>>>>>>> 6a2658eca2ddb074e6043e5f13091b158e4380db
 SQLAlchemy==1.3.12
 watchdog==0.9.0
 Werkzeug==0.16.0
