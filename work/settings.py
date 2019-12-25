@@ -3,7 +3,7 @@
 import os
 
 
-dev_db = "sqlite:///" + os.path.join("f:\work","data.db")
+dev_db = "sqlite:///" + os.path.join("D:\PycharmProjects\workassistant","data.db")
 
 
 SECRET_KEY = os.getenv("SECRET_KEY","secret string")

@@ -2,23 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="t ext/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}" type="text/css">
     <title>Title</title>
 </head>
 <body>
 {%from "macros.html" import form_field%}
-    <form method = "post">
-        {{form.csrf_token}}
-        {{form_field(form.subject)}}<br>
+    <div>
+         <form method = "post">
+              {{form.csrf_token}}
+              {{form_field(form.subject)}}<br>
 
-        {{form_field(form.keyword1)}}<br>
+              {{form_field(form.keyword1)}}<br>
 
-        {{form_field(form.keyword2)}}<br>
-        {{form_field(form.text,rows=5,cols=50)}}<br>
+              {{form_field(form.keyword2)}}<br>
+              {{form_field(form.text,rows=5,cols=50)}}<br>
 
-        {{form_field(form.submit)}}<br>
+              {{form_field(form.submit)}}<br>
 
-    </form>
+         </form>
+    </div>
     <nav>
             <ul>
                 <li>
