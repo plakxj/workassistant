@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="t ext/css">
-    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+    <title>记录页</title>
 </head>
 <body>
-{%from "macros.html" import form_field%}
-    <form method = "post">
+<h1>记录页</h1>
+    <div>
+        {%from "macros.html" import form_field%}
+             <form method = "post">
         {{form.csrf_token}}
         {{form_field(form.subject)}}<br>
 
@@ -17,6 +19,8 @@
         {{form_field(form.text,rows=5,cols=50)}}<br>
 
         {{form_field(form.submit)}}<br>
+    </div>
+
 
     </form>
     <nav>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="t ext/css">
@@ -6,6 +6,12 @@
     <title>工作助手</title>
 </head>
 <body>
+<ul>
+  <li><a href="#home">主页</a></li>
+  <li><a href="#news">新闻</a></li>
+  <li><a href="#contact">联系</a></li>
+  <li><a href="#about">关于</a></li>
+</ul>
     <img alt="Avatar" class="avatar" src="{{ url_for('static', filename='78310a55b319ebc47e886b678926cffc1f17165f.jpg') }}">
 <p>下面开始工作</p>
 <ul>{% for movie in movies %}                              {# 迭代 movies 变量 #}
