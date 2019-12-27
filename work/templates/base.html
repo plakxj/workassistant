@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+    <meta charset="UTF-8">
+    <title>工作助手</title>
+</head>
+<body>
+      {% block title %}
+          <p>1</p>
+      {% endblock %}
+      {% block content %}
+          <p>2</p>
+      {% endblock %}
+
+      {% block mark %}
+          <p>3</p>
+      {% endblock %}
+      {% block link %}
+          <p>4</p>
+      {% endblock %}
+</body>
+</html>

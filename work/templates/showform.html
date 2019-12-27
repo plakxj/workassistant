@@ -1,37 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
-</head>
-<body>
-    <h1>工作情况</h>
+﻿{% extends 'base.html' %}
+{% from 'macros.html' import form_field %}
+
+{% block title %}
+    <h1>工  作  情  况</h1>
+{% endblock %}
+
+{% block content %}
     {%for note in notes%}
 	 <div class="center">
-            <a href="{{ url_for('editform',note_id=note.id)}}">{{note.subject}}</a><br>
-            <a href="{{ url_for('editform',note_id=note.id)}}">{{note.text}}</a><br>
+            <a class="block" href="{{ url_for('editform',note_id=note.id)}}">{{note.subject}}</a><br>
+            <a class="block"href="{{ url_for('editform',note_id=note.id)}}">{{note.text}}</a><br>
             {%from "macros.html" import form_field%}
-                 <form method = "post" action="{{url_for("deleteform", note_id=note.id)}}"}>
+                 <form  class="block" method = "post" action="{{url_for("deleteform", note_id=note.id)}}"}>
                       {{form.csrf_token}}
                       {{form_field(form.delete)}}<br>
                  </form>
         </div> 
     {%endfor%}
+{% endblock %}
 
+{% block link %}
     <nav>
         <ul>
             <li>
                 <a href="{{ url_for('recordform') }}">recordform</a>
-            </li> 
-        </ul> 
+                <a href="{{ url_for('showform') }}">showform</a>
+            </li>
+        </ul>
     </nav>
-    <nav>
-            <ul>
-                <li>
-                    <a href="{{ url_for('showform') }}">showform</a>
-                </li> 
-            </ul> 
-        </nav>
+{% endblock %}
 </body>
 </html>

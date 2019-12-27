@@ -1,58 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-<<<<<<< HEAD:work/templates/recordform.html
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
-    <title>记录页</title>
-</head>
-<body>
-<h1>记录页</h1>
+﻿{% extends 'base.html' %}
+{% from 'macros.html' import form_field %}
+
+{% block title %}
+    <h1>记  录  页</h1>
+{% endblock %}
+
+{% block content %}
     <div>
         {%from "macros.html" import form_field%}
              <form method = "post">
         {{form.csrf_token}}
         {{form_field(form.subject)}}<br>
-=======
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}" type="text/css">
-    <title>Title</title>
-</head>
-<body>
-{%from "macros.html" import form_field%}
-    <div>
-         <form method = "post">
-              {{form.csrf_token}}
-              {{form_field(form.subject)}}<br>
->>>>>>> c74d9e22c79431eae507924e3e472e1f51f70fb1:work/templates/form.html
-
-              {{form_field(form.keyword1)}}<br>
-
-              {{form_field(form.keyword2)}}<br>
-              {{form_field(form.text,rows=5,cols=50)}}<br>
-
-<<<<<<< HEAD:work/templates/recordform.html
+        {{form_field(form.keyword1)}}<br>
+        {{form_field(form.keyword2)}}<br>
+        {{form_field(form.text,rows=5,cols=50)}}<br>
         {{form_field(form.submit)}}<br>
-    </div>
-
-=======
-              {{form_field(form.submit)}}<br>
->>>>>>> c74d9e22c79431eae507924e3e472e1f51f70fb1:work/templates/form.html
-
          </form>
     </div>
+ {% endblock %}
+{% block link %}
     <nav>
-            <ul>
-                <li>
-                    <a href="{{ url_for('recordform') }}">recordform</a>
-                </li> 
-            </ul> 
-        </nav>
-        <nav>
-                <ul>
-                    <li>
-                        <a href="{{ url_for('showform') }}">showform</a>
-                    </li> 
-                </ul> 
-            </nav>
+        <ul>
+            <li>
+                <a href="{{ url_for('recordform') }}">recordform</a>
+                <a href="{{ url_for('showform') }}">showform</a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}
 </body>
 </html>

@@ -18,7 +18,7 @@ def recordform():
         db.session.add(text1)
         db.session.commit()
         flash("you text is saved")
-        redirect(url_for("showform"))
+        return redirect(url_for("showform"))
     return render_template("recordform.html",form=form)
 
 
@@ -37,9 +37,10 @@ def deleteform(note_id):
         db.session.delete(note)
         db.session.commit()
         flash("当前笔记已删除")
+        return redirect(url_for("showform"))
     else:
         abort(400)
-    return redirect(url_for("showform"))
+
 
 
 @app.route("/editform/<note_id>",methods=["GET","POST"])
@@ -53,12 +54,16 @@ def editform(note_id):
         note.text = form.text.data
         db.session.commit()
         flash("笔记已更新")
-        redirect(url_for("showform"))
+        return redirect(url_for("showform"))
     form.subject.data = note.subject
     form.keyword1.date = note.keyword1
     form.keyword2.data = note.keyword2
     form.text.data = note.text
     return render_template("editform.html",form=form)
+
+@app.route("/",methods=["GET","POST"])
+def index():
+    return render_template("base.html")
 
 @app.cli.command()
 @click.option('--drop', is_flag=True, help='Create after drop.') 
