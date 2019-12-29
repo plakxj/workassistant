@@ -2,18 +2,18 @@
 {% from 'macros.html' import form_field %}
 
 {% block title %}
-    <h1>记  录  页</h1>
+    <h1 class="back">记   录   页</h1>
 {% endblock %}
 
 {% block content %}
-    <div>
+    <div class="alignleft">
         {%from "macros.html" import form_field%}
              <form method = "post">
         {{form.csrf_token}}
-        {{form_field(form.subject)}}<br>
-        {{form_field(form.keyword1)}}<br>
-        {{form_field(form.keyword2)}}<br>
-        {{form_field(form.text,rows=5,cols=50)}}<br>
+        {{form_field(form.subject,class_="formtitle")}}<br>
+        {{form_field(form.keyword1,class_="formtitle")}}<br>
+        {{form_field(form.keyword2,class_="formtitle")}}<br>
+        {{form_field(form.text,class_="formtext")}}<br>
         {{form_field(form.submit)}}<br>
          </form>
     </div>
@@ -23,6 +23,8 @@
         <ul>
             <li>
                 <a href="{{ url_for('recordform') }}">recordform</a>
+            </li>
+            <li>
                 <a href="{{ url_for('showform') }}">showform</a>
             </li>
         </ul>

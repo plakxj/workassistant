@@ -2,32 +2,41 @@
 {% from 'macros.html' import form_field %}
 
 {% block title %}
-    <h1>工  作  情  况</h1>
+    <h1 class="back">工 作 情 况</h1>
 {% endblock %}
 
 {% block content %}
-    {%for note in notes%}
-	 <div class="center">
-            <a class="block" href="{{ url_for('editform',note_id=note.id)}}">{{note.subject}}</a><br>
-            <a class="block"href="{{ url_for('editform',note_id=note.id)}}">{{note.text}}</a><br>
-            {%from "macros.html" import form_field%}
-                 <form  class="block" method = "post" action="{{url_for("deleteform", note_id=note.id)}}"}>
-                      {{form.csrf_token}}
-                      {{form_field(form.delete)}}<br>
-                 </form>
+     {%for note in notes%}
+	     <div class="alignleft">
+             <a class="a" href="{{ url_for('editform',note_id=note.id)}}">
+                 <span class="button">主题：</span>
+                 <span class="marginright">{{note.subject}}</span>
+                 <span class="button">关键词：</span>
+                 <span class="marginright">{{note.keyword1}}</span>
+                 <span class="button">时间：</span>
+                 <span class="marginright">{{note.keyword2}}</span>
+             </a><br>
+             <a class="a" href="{{ url_for('editform',note_id=note.id)}}"><b>内容：</b>{{note.text}}</a><br>
+             {%from "macros.html" import form_field%}
+             <form method = "post" action="{{url_for("deleteform", note_id=note.id)}}"}>
+                 <a class="a" href="{{ url_for('editform',note_id=note.id)}}">
+                     <small class="button1">编辑</small>
+                 </a>{{form.csrf_token}}
+                 {{form.delete}}<br>
+             </form>
         </div> 
     {%endfor%}
-{% endblock %}
+  {% endblock %}
 
 {% block link %}
     <nav>
         <ul>
             <li>
                 <a href="{{ url_for('recordform') }}">recordform</a>
+            </li>
+            <li>
                 <a href="{{ url_for('showform') }}">showform</a>
             </li>
         </ul>
     </nav>
 {% endblock %}
-</body>
-</html>
