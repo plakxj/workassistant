@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+﻿{% extends 'base.html' %}
 {% from 'macros.html' import form_field %}
 
 {% block title %}
@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block content %}
-    <h1> 编辑页</h1>
         <form method = "post">
                 {{form.csrf_token}}
                 {{form_field(form.subject)}}<br>
@@ -21,8 +20,10 @@
     <nav>
         <ul>
             <li>
-                <a href="{{ url_for('recordform') }}">recordform</a>
-                <a href="{{ url_for('showform') }}">showform</a>
+                <a href="{{ url_for('recordform') }}">recordform&#8629;</a>
+            </li>
+            <li>
+                <a href="{{ url_for('showform') }}">showform&#8629;</a>
             </li>
         </ul>
     </nav>

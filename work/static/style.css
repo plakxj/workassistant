@@ -1,6 +1,6 @@
-/* 标题 */
-.back {
-    color:#8AC007；
+﻿/* 标题 */
+h1 {
+    color:#ffcccc；
     font-size:200px;
     font-family:"sans-serif";
     text-align:center;
@@ -49,6 +49,7 @@ input[type=text],select {
     box-sizing:border-box;
     text-align:center;
     }
+
 input[type=save] {
     width：50%；
     background-color:#4CAF50；
@@ -59,6 +60,7 @@ input[type=save] {
     border-radius:4px;
     cursor:pointer;
     }
+
 .aligncenter {
     text-align:center;
     }
@@ -102,13 +104,26 @@ input[type=save] {
 .formtext {
     text-align:center;
     }
+
 b {
     font-size:20px;
     color:black;
     }
 
-.a{
-    tex-decoration:none;
+a:link {text-decoration:none;
+    background-color:#dddddd;
+    }
+
+a:visited {text-decoration:none;
+    background-color:#dddddd;
+    }
+
+a:hover {text-decoration:none;
+    background-color:#dddddd;
+    }
+
+a:active {text-decoration:none;
+    background-color:#dddddd;
     }
 
 .button {
@@ -128,4 +143,7 @@ b {
 
 .marginright {
     margin-right:10px;
+    }
+li {
+    color:green;
     }
