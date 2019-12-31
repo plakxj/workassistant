@@ -12,14 +12,14 @@ class RecordForm(FlaskForm):
 class ShowForm(FlaskForm):
     subject = StringField("subject",validators=[DataRequired()])
     keyword1 = StringField("keyword1",validators=[DataRequired()])
-    keyword2 = StringField("keyword2", validators=[DataRequired()])
-    text = StringField("text", validators=[DataRequired()])
+    keyword2 = StringField("keyword2",validators=[DataRequired()])
+    text = StringField("text",validators=[DataRequired()])
     save = SubmitField("save")
 
 class EditForm(FlaskForm):
     subject = StringField("subject",validators=[DataRequired()])
     keyword1 = StringField("keyword1",validators=[DataRequired()])
-    keyword2 = StringField("keyword2", validators=[DataRequired()])
+    keyword2 = StringField("keyword2",validators=[DataRequired()])
     text = StringField("text", validators=[DataRequired()])
     update = SubmitField("update")
 
