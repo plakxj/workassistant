@@ -2,19 +2,19 @@
 {% from 'macros.html' import form_field %}
 
 {% block title %}
-    <h1 class="back">工 作 情 况</h1>
+    <h1 class="head">工 作 情 况</h1>
 {% endblock %}
 
 {% block content %}
      {%for note in notes%}
 	     <div class="alignleft">
                          <div class="a" href="{{ url_for("editform",note_id=note.id)}}">
-                     <span class="button">主题:</span>
-                     <span class="keyword">{{note.subject}}</span>
-                     <span class="button">关键词:</span>
-                     <span class="keyword">{{note.keyword1}}</span>
-                     <span class="button">时间:</span>
-                     <span class="keyword">{{note.keyword2}}</span>
+                     <a class="button">主题</span>
+                     <a class="keyword">{{note.subject}}</span>
+                     <a class="button">关键词</span>
+                     <a class="keyword">{{note.keyword1}}</span>
+                     <a class="button">时间</span>
+                     <a class="keyword">{{note.keyword2}}</span>
                          </div>
                      <p class="text">
                                   <a class="content" href="{{ url_for("editform",note_id=note.id)}}">内容:{{note.text}}</a>
