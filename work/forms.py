@@ -1,7 +1,7 @@
 #-*-coding:GBK -*- 
 
 from flask_wtf import FlaskForm
-from wtforms import StringField,PasswordField,BooleanField,SubmitField
+from wtforms import StringField,PasswordField,BooleanField,SubmitField,TextAreaField
 from wtforms.validators import DataRequired,Length
 import sys
 
@@ -17,14 +17,14 @@ class ShowForm(FlaskForm):
     subject = StringField("主题",validators=[DataRequired()])
     keyword1 = StringField("关键字",validators=[DataRequired()])
     keyword2 = StringField("时间",validators=[DataRequired()])
-    text = StringField("内容",validators=[DataRequired()])
+    text = TextAreaField("内容",validators=[DataRequired()])
     save = SubmitField("保存")
 
 class EditForm(FlaskForm):
     subject = StringField("主题",validators=[DataRequired()])
     keyword1 = StringField("关键字",validators=[DataRequired()])
     keyword2 = StringField("时间",validators=[DataRequired()])
-    text = StringField("内容", validators=[DataRequired()])
+    text = TextAreaField("内容", validators=[DataRequired()])
     update = SubmitField("更新")
 
 class DeleteForm(FlaskForm):

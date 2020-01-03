@@ -8,28 +8,28 @@
 {% block content %}
      {%for note in notes%}
 	     <div class="alignleft">
-                   <div>
-                      <span class="button">主题</span>
-                      <a href="{{ url_for("editform",note_id=note.id)}}" class="key">{{note.subject}}</span>
-                      <span class="button">关键词</span>
-                      <a href="{{ url_for("editform",note_id=note.id)}}" class="key">{{note.keyword1}}</span>
-                      <span class="button">时间</span>
-                      <a href="{{ url_for("editform",note_id=note.id)}}" class="key">{{note.keyword2}}</span>
-                   </div>
-                   <p class="text">
-                      <a class="content" href="{{ url_for("editform",note_id=note.id)}}">内容:{{note.text}}</a>
-                   </p>
-                   <div>
-                        <form method = "post" action="{{url_for("deleteform", note_id=note.id)}}"}>
-                           <span>
-                               <a class="edit" href="{{ url_for('editform',note_id=note.id)}}"><small>编辑</small></a>
-                          </span>
-                       <span>{{form.csrf_token}}</span>
-                       <span>{{form.delete(class_="edit")}}</span>
-                     
-                           </form>
-                   </div>
-             </div> 
+                           <div>
+                               <span class="sub">主题</span>
+                               <a href="{{ url_for("editform",note_id=note.id)}}" class="key">{{note.subject}}</span></a>
+                               <span class="sub">关键词</span>
+                               <a href="{{ url_for("editform",note_id=note.id)}}" class="key">{{note.keyword1}}</a>
+                               <span class="sub">时间</span>
+                               <a href="{{ url_for("editform",note_id=note.id)}}" class="key">{{note.keyword2}}</a>
+                           </div>
+                           <div class="text">
+                                   <a class="content" href="{{ url_for("editform",note_id=note.id)}}">内容:{{note.text}}</a>
+                           </div>
+                           <div>
+                                     <form method="post" action="{{url_for("deleteform", note_id=note.id)}}"}>
+                                           <span>
+                                                   <a class="edit" href="{{ url_for('editform',note_id=note.id)}}"><span class="color">编辑</span></a>
+                                           </span>
+                                           <span>
+                                                   {{ form.delete(class_="del") }}
+                                           </span>
+                                    </form>
+                            </div>
+                       </div> 
     {%endfor%}
   {% endblock %}
 

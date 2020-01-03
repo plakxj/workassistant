@@ -27,7 +27,7 @@
 
 a.key:link {
     text-decoration:none;
-    color:#CFD8DC;
+    color:#FFFD8FC;
     font-family:"Microsoft YaHei";
     font-size:18px;
     magrin-left:50px;
@@ -50,6 +50,7 @@ a.key:hover {
 a.key:active {
     text-decoration:none;
     color:#ffffff;
+
     }
 
 
@@ -75,28 +76,55 @@ a.content:active {
 
 a.edit:link {
     text-decoration:none;
+    color:#CFD8DC;
+    padding-left:10px;
+    padding-right:10px;
+    font-family:"仿宋";
+    font-size:18px;
+    background-color:#009688;
+    border-style:outset;
+    border-radius:2px;
+    border-width:2px;
+    border-color:#ffffff;  
+    margin-top:2px;
+    margin-left:10px;
+    margin-right:20px;
+    padding-bottom:1px;
+    }
+
+a.edit:visited {
+    text-decoration:none;
+    border-color:#ffffff;
+    }
+
+a.edit:hover {
+    text-decoration:none;
+    border-color:#000000;
+    }
+
+a.edit:active {
+    text-decoration:none;
+    border-color:#000000;
+    }
+.color{
+    color:#ffffff;
+      }
+
+.del {
+    text-decoration:none;
+    padding-left:10px;
+    padding-right:10px;
     color:#ffffff;
     font-family:"楷体";
     font-size:18px;
     background-color:#009688;
     border-radius:2px;
-
+    margin-left:10px;
+    margin-right:20px;
     }
-
-a.edit:visited {
-    text-decoration:none;
-    color:#ffffff;
-    }
-
-a.edit:hover {
-    text-decoration:none;
-    color:#ffffff;
-    }
-
-a.edit:active {
-    text-decoration:none;
-    color:#ffffff;
-    }
+.del:hover {
+    border-color: #000000;
+}
 
 a.bottom:link {
     text-decoration:none;
@@ -127,29 +155,25 @@ a.bottom:active {
 
 .alignleft {
     text-align:left;
-    border:10px,solid,red;
     background-color:#607D8B;
     text-decoration:none;
     border-radius:8px;
     margin-bottom:20px;
-    padding-top:10px;
+    padding-top:5px;
     padding-left:15px;
     padding-right:12px;
-    padding-bottom:10px;
-    
+    padding-bottom:5px;
+  
     }
 
-.button {
-    color:#000000;
-    font-family:"Microsoft YaHei";
-    font-size:20px;
-    padding-bottom:8px；
+.sub {
     letter-spacing:2px;
     }
 
 
 .text {
     color:#000000；
+    font-family:"楷体";
     magrin-top:100px;
     margin-right:10px;
     padding-bottom:10px;
@@ -162,7 +186,7 @@ a.bottom:active {
     border-width:1px;
     border-color:#cccccc;
     background-color:#ffffff;
- 
+    margin-bottom:10px;
     }
 
 .button1{
@@ -233,6 +257,7 @@ input[type=save] {
      }
 
 .formtitle {
+    background-color:#339988;
     text—align:center;
     }
 
