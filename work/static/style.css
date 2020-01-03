@@ -14,45 +14,121 @@
 
 /* 标题颜色 */
 .head {
-    color:#11bb77;
+    color:#ffffff;
     font-size:50px;
     font-family:"黑体";
     text-align:center;
     margin-top:50px;
     margin-bottom:30px;
-    background:#f2e7ca;
+    background-color:#455A64;
     padding:20px;
     border-radius:4px;
     }
 
-
-
-a:link {text-decoration:none;
-    color:#11bb77;
+a.key:link {
+    text-decoration:none;
+    color:#CFD8DC;
+    font-family:"Microsoft YaHei";
+    font-size:18px;
+    magrin-left:50px;
+    margin-right:20px;
+    padding-bottom:8px；
+    text-decoration:none;
+    letter-spacing:2px;
     }
 
-a:visited {text-decoration:none;
-    color:#333333;
+a.key:visited {
+    text-decoration:none;
+    color:#CFD8DC;
     }
 
-a:hover {text-decoration:none;
-   color:#119977;
+a.key:hover {
+    text-decoration:none;
+    color:#ffffff;
     }
 
-a:active {text-decoration:none;
-   color:#ffffff;
+a.key:active {
+    text-decoration:none;
+    color:#ffffff;
     }
 
-.a  {
-    margin-top:10px;
-    margin-bottom:18px;
+
+a.content:link {
+    text-decoration:none;
+    color:#000000;
     }
-    
+
+a.content:visited {
+    text-decoration:none;
+    color:#000000;
+    }
+
+a.content:hover {
+    text-decoration:none;
+    color:#999999;
+    }
+
+a.content:active {
+    text-decoration:none;
+    color:#999999;
+    }
+
+a.edit:link {
+    text-decoration:none;
+    color:#ffffff;
+    font-family:"楷体";
+    font-size:18px;
+    background-color:#009688;
+    border-radius:2px;
+
+    }
+
+a.edit:visited {
+    text-decoration:none;
+    color:#ffffff;
+    }
+
+a.edit:hover {
+    text-decoration:none;
+    color:#ffffff;
+    }
+
+a.edit:active {
+    text-decoration:none;
+    color:#ffffff;
+    }
+
+a.bottom:link {
+    text-decoration:none;
+    color:#000000;
+    font-family:"Microsoft YaHei";
+    font-size:14px;
+    magrin-left:50px;
+    margin-right:20px;
+    padding-bottom:8px；
+    text-decoration:none;
+    }
+
+a.bottom:visited {
+    text-decoration:none;
+   color:#000000;
+    }
+
+a.bottom:hover {
+    text-decoration:none;
+   color:#000000;
+    }
+
+a.bottom:active {
+    text-decoration:none;
+    color:#000000;
+    }
+
 
 .alignleft {
     text-align:left;
     border:10px,solid,red;
-    background-color:#f2e7ca;
+    background-color:#607D8B;
     text-decoration:none;
     border-radius:8px;
     margin-bottom:20px;
@@ -68,44 +144,20 @@ a:active {text-decoration:none;
     font-family:"Microsoft YaHei";
     font-size:20px;
     padding-bottom:8px；
-    height:50px;
     letter-spacing:2px;
-    }
-
-.keyword {
-    color:#11bb77;
-    font-family:"Microsoft YaHei";
-    font-size:18px;
-    magrin-left:50px;
-    margin-right:20px;
-    padding-bottom:8px；
-    text-decoration:none;
-    letter-spacing:2px;
-    }
-
-.button1 {
-    border:1px,solid,#dddddd;
-    color:#000000;
-    font-family:"楷体";
-    font-size:14px;
-    padding-bottom:8px；
-    height:50px;
-    margin-left:50px;  
-    margin-right:100px;
     }
 
 
 .text {
+    color:#000000；
     magrin-top:100px;
     margin-right:10px;
     padding-bottom:10px;
     padding-top:10px;
     font-size:18px;
     line-height:200%;
-
     border-radius:5px;
     margin-top:5px;
-    color:#000000；
     border-style:solid;
     border-width:1px;
     border-color:#cccccc;
@@ -113,14 +165,16 @@ a:active {text-decoration:none;
  
     }
 
-.content {
-    marigin-top:20px;
+.button1{
+    color:#ffffff;
+    border-radius:3px;
+    border:2px solid #FFFFFF;
+    background-color:#009688;
     text-align:center;
     text-decoration:none;
-    padding-top:20px；
-    padding-bottom:20px;
-    font-family:"仿宋";
-    line-heigt:5px;
+    font-family:"楷体";
+    margin-left:20px;
+    margin-right:20px;
     }
 
 

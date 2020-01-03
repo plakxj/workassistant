@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-  
 from work import db
 
 class Note(db.Model):

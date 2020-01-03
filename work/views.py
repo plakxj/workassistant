@@ -1,4 +1,5 @@
-﻿
+﻿# -*- coding: utf-8 -*-  
+
 from flask import flash,redirect,url_for,render_template
 from work import app,db
 from work.forms import RecordForm,EditForm,DeleteForm

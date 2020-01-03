@@ -1,27 +1,31 @@
+#-*-coding:GBK -*- 
+
 from flask_wtf import FlaskForm
 from wtforms import StringField,PasswordField,BooleanField,SubmitField
 from wtforms.validators import DataRequired,Length
+import sys
+
 
 class RecordForm(FlaskForm):
-    subject = StringField("subject",validators=[DataRequired()])
-    keyword1 = StringField("keyword1",validators=[DataRequired()])
-    keyword2 = StringField("keyword2", validators=[DataRequired()])
-    text = StringField("text", validators=[DataRequired()])
-    submit = SubmitField("save")
+    subject = StringField("主题",validators=[DataRequired()])
+    keyword1 = StringField("关键字",validators=[DataRequired()])
+    keyword2 = StringField("时间", validators=[DataRequired()])
+    text = StringField("内容", validators=[DataRequired()])
+    submit = SubmitField("保存")
 
 class ShowForm(FlaskForm):
-    subject = StringField("subject",validators=[DataRequired()])
-    keyword1 = StringField("keyword1",validators=[DataRequired()])
-    keyword2 = StringField("keyword2",validators=[DataRequired()])
-    text = StringField("text",validators=[DataRequired()])
-    save = SubmitField("save")
+    subject = StringField("主题",validators=[DataRequired()])
+    keyword1 = StringField("关键字",validators=[DataRequired()])
+    keyword2 = StringField("时间",validators=[DataRequired()])
+    text = StringField("内容",validators=[DataRequired()])
+    save = SubmitField("保存")
 
 class EditForm(FlaskForm):
-    subject = StringField("subject",validators=[DataRequired()])
-    keyword1 = StringField("keyword1",validators=[DataRequired()])
-    keyword2 = StringField("keyword2",validators=[DataRequired()])
-    text = StringField("text", validators=[DataRequired()])
-    update = SubmitField("update")
+    subject = StringField("主题",validators=[DataRequired()])
+    keyword1 = StringField("关键字",validators=[DataRequired()])
+    keyword2 = StringField("时间",validators=[DataRequired()])
+    text = StringField("内容", validators=[DataRequired()])
+    update = SubmitField("更新")
 
 class DeleteForm(FlaskForm):
-    delete = SubmitField("delete")
+    delete = SubmitField("删除")
